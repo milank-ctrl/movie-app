@@ -122,10 +122,33 @@ body {
 
 .pagination {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  width: 80vh;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
-.pagination-btn {
-  padding-left: 1em;
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #6c7ac9;
+  color: #6c7ac9;
+}
+
+.prev-btn, .next-btn {
+  font-weight: bold;
+}
+
+.pagination-active a {
+  color: #fff;
+  background: #6c7ac9;
+}
+.pagination-disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
 }
 
 @media only screen and (max-width: 768px) {

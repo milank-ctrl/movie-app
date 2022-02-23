@@ -2,6 +2,7 @@ import './App.css';
 import MovieC from './MovieC';
 import Pagination from './Pagination';
 import React, {useState, useEffect} from 'react';
+import ReactPaginate from 'react-paginate';
 
 
 function Movie() {
@@ -44,10 +45,16 @@ function Movie() {
             movies = {movies}
             loading = {loading}
         />
-        <div className="pagination">
-            <h2>Current page: {number} </h2>
-            <button onClick={nextPage} className="pagination-btn">+</button> 
-        </div>
+        <ReactPaginate 
+            previousLabel={"← Previous"}
+            nextLabel={"Next →"}
+            pageCount={totalPage}
+            containerClassName={"pagination"}
+            previousLinkClassName={"prev-btn"}
+            nextLinkClassName={"next-btn"}
+            disabledClassName={"pagination-disabled"}
+            activeClassName={"pagination-active"}
+        />
                           
     </div>
     
