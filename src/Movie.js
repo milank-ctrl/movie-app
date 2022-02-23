@@ -1,42 +1,39 @@
 import './App.css';
 import MovieC from './MovieC';
-import Pagination from './Pagination';
 import React, {useState, useEffect} from 'react';
-import ReactPaginate from 'react-paginate';
+import Pagination from './Pagination';
 
 
 function Movie() {
+    const [currentPage, setCurrentPage] = useState(1);
+    
 
     useEffect(() => {
         fetchMovies();
-    }, []);
+        
+    }, [currentPage]);
 
     const [movies, setMovies] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [number, setNumber] = useState(1);
-    const [totalPage, setTotalPage] = useState();
+    
+    //const [totalPage, setTotalPage] = useState(0);
     const [loading, setLoading] = useState(false);
 
     const fetchMovies = async() => {
         setLoading(true);
+
         const data = await fetch (`https://api.themoviedb.org/3/movie/popular?api_key=27a42a31404495c7097c57669d90dcce&language=en-US&page=${currentPage}`);
         
-
         const moviesList = await data.json();
-        console.log(moviesList);
-
+       
         setMovies(moviesList.results);
-        setTotalPage(moviesList.total_pages);
+        //setTotalPage(moviesList.total_pages);
         setLoading(false);
     }
-    // Change page
-  //const paginate = pageNumber => setCurrentPage(pageNumber);
-  const nextPage = number => setNumber(number + 1);
 
- 
-  console.log(currentPage);
+    const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  
+    const prevPage = pageNumber => setCurrentPage((pageNumber-1< currentPage) ? 1 : pageNumber-1);
+    const nextPage = pageNumber => setCurrentPage(pageNumber+1);
 
   return (
     <div className="container">
@@ -45,16 +42,14 @@ function Movie() {
             movies = {movies}
             loading = {loading}
         />
-        <ReactPaginate 
-            previousLabel={"← Previous"}
-            nextLabel={"Next →"}
-            pageCount={totalPage}
-            containerClassName={"pagination"}
-            previousLinkClassName={"prev-btn"}
-            nextLinkClassName={"next-btn"}
-            disabledClassName={"pagination-disabled"}
-            activeClassName={"pagination-active"}
+        <Pagination 
+            paginate={paginate}
+            currentPage={currentPage}
+            nextPage={nextPage}
+            prevPage={prevPage}
+        
         />
+        
                           
     </div>
     

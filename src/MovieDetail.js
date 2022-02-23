@@ -1,9 +1,6 @@
 import './App.css';
-
-
 import React, {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
-
 
 function MovieDetail() {
 
@@ -22,7 +19,7 @@ function MovieDetail() {
         );
 
         const movieList = await data.json();
-        console.log(movieList);
+        
         
         setMovie(movieList);
     }
