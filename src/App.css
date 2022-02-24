@@ -17,7 +17,25 @@ body {
   background-color: #262626;
   color: white;
 }
-
+.filter-container {
+  display: flex;
+  flex-direction: row;
+}
+.filterBtn {
+  display: flex;
+  height: 2.5em;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  margin-left: 1em;
+}
 .container h3 {
   padding: 1rem;
   font-size: 2rem;
@@ -124,29 +142,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2em;
 }
 
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   cursor: pointer;
-  width: 70vh;
-  padding-left: 2em;
-  padding-bottom: 2em;
+  width: 40vh;
   font-size: .9rem;
 }
 
 .page-item {
   color: white;
-  padding: 13px 20px;
-  border: 2px solid white;
-  font-size: 17px;
+  padding: 7px 10px;
+  border: 1px solid white;
+  font-size: 1em;
   transition: 0.3s;
-  border-radius: 10px;
-  font-family: Arial;
+  border-radius: 5px;
   font-weight: 600;
+  
 }
 
 .page-item:hover {
@@ -157,6 +174,29 @@ body {
 .active-page {
   background: grey;
 }
+
+.pagination-btn {
+  display: flex;
+  height: 2.5em;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+}
+
+.next-button {
+  transform: rotate(180deg);
+}
+
+.pagination-btn:hover {
+  transform: translateY(-2px);
+ }
 
 
 
