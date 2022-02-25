@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 
 function MovieC({movies, loading}) {
@@ -9,9 +10,21 @@ function MovieC({movies, loading}) {
   if(loading) {
     return <h2>Loading...</h2>    
   }
-
+  const container = {
+    hidden: { opacity: 1, scale: 0.5 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.6
+      }
+    }
+  };
   return (
-    <div className="movie-container">
+    <motion.div variants={container}
+    initial="hidden"
+    animate="visible"  className="movie-container">
       {movies.map(movie => (
         <div key={movie.id} className='movie-card'>
           <Link className="link-movie" to={`/movie-app/${movie.id}`}>
@@ -24,7 +37,7 @@ function MovieC({movies, loading}) {
           )
         )
       }
-    </div>
+    </motion.div>
   );
 }
 

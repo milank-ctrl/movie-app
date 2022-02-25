@@ -59,6 +59,7 @@ function Movie() {
             movies = {movies}
             loading = {loading}
         />
+        
         <Pagination 
             paginate={paginate}
             currentPage={currentPage}

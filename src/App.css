@@ -198,6 +198,9 @@ body {
   transform: translateY(-2px);
  }
 
+ .filter-container {
+   display: none;
+ }
 
 
 
