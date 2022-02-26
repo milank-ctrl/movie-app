@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 function MovieDetail() {
 
     const location = useLocation();
-    const movie_id = location.pathname.split('movie-app/')[1];
+    const movie_id = location.pathname.split('/')[1];
 
     useEffect(() => {
         fetchMovie();
