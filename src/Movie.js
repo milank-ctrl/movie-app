@@ -5,6 +5,8 @@ import Pagination from './Pagination';
 import Filter from './Filter';
 
 
+
+
 function Movie() {
     const [currentPage, setCurrentPage] = useState(1);
     const [movies, setMovies] = useState([]);
@@ -14,7 +16,9 @@ function Movie() {
     const [filtered, setFiltered] = useState([]);
     const [activeGenre, setActiveGenre] = useState(0);
     
-
+    const json = require('./other/logs.json');
+   
+    
     useEffect(() => {
         fetchMovies();
 
@@ -31,7 +35,7 @@ function Movie() {
     const fetchMovies = async() => {
         setLoading(true);
 
-        const data = await fetch (`https://api.themoviedb.org/3/movie/popular?api_key=27a42a31404495c7097c57669d90dcce&language=en-US&page=${currentPage}`);
+        const data = await fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${json.api_key}&language=en-US&page=${currentPage}`);
         
         const moviesList = await data.json();
         

@@ -1,222 +1,223 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
-
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body,
 html {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  min-height: 100vh;
-  font-family: Poppins, sans-serif;
-  background-color: #262626;
-  color: white;
+    min-height: 100vh;
+    font-family: Poppins, sans-serif;
+    background-color: #262626;
+    color: white;
 }
-.filter-container {
-  display: flex;
-  flex-direction: row;
-}
-.filterBtn {
-  display: flex;
-  height: 2.5em;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  background-color: #eeeeee4b;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.2s linear;
-  cursor: pointer;
-  border: none;
-  background: #fff;
-  margin-left: 1em;
-}
+
 .container h3 {
-  padding: 1rem;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .movie-container {
-  display: flex;
-  flex-wrap: wrap;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .movie-card {
-  padding: 2%;
-  flex-grow: 1;
-  flex-basis: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;  
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .movie-card:hover {
-  transition: transform .2s;
-  transform: scale(1.1);
-  cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-
-.movie-card img{
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+.movie-card img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .movie-card .title {
-  font-size: 0.9rem;
-  text-decoration: none;
+    font-size: 0.9rem;
+    text-decoration: none;
 }
 
 .link-movie {
-  text-decoration: none;
-  color: inherit;
-  
+    text-decoration: none;
+    color: inherit;
 }
 
 .movie-card .description {
-  height: 5vh;
-  
-}
-
-.movie-card .releaseDate {
-  font-size: 0.6rem;
+    height: 5vh;
 }
 
 .movie-detail-container {
-  padding: 2%;
-  margin: 1%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; 
-  
-  
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.movie-detail-container img{
-  max-width: 100%;
-  max-height: 60vh;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+.movie-detail-container img {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .movie-detail-container .movie-details {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
 }
 
 .movie-detail-container .title {
-  font-size: 2rem;
-  padding-bottom: 1em;
+    font-size: 2rem;
+    padding-bottom: 1em;
 }
 
 .movie-detail-container .overview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.2rem;
-  padding-bottom: 1em;
-  width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 1em;
+    width: 80%;
 }
 
 .movie-detail-container .vote {
- 
-  font-size: 1.2rem;
-  
+    font-size: 1.2rem;
 }
+
 .pagination-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2em;
+    padding-top: 1em;
 }
 
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  cursor: pointer;
-  width: 40vh;
-  font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+    width: 40vh;
+    font-size: .9rem;
 }
 
 .page-item {
-  color: white;
-  padding: 7px 10px;
-  border: 1px solid white;
-  font-size: 1em;
-  transition: 0.3s;
-  border-radius: 5px;
-  font-weight: 600;
-  
+    color: white;
+    padding: 7px 10px;
+    border: 1px solid white;
+    font-size: 1em;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 .page-item:hover {
-  background: wheat;
-  color: black
+    background: wheat;
+    color: black
 }
 
 .active-page {
-  background: grey;
+    background: grey;
 }
 
 .pagination-btn {
-  display: flex;
-  height: 2.5em;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  background-color: #eeeeee4b;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.2s linear;
-  cursor: pointer;
-  border: none;
-  background: #fff;
+    display: flex;
+    height: 2.5em;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
 }
 
 .next-button {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .pagination-btn:hover {
-  transform: translateY(-2px);
- }
+    transform: translateY(-2px);
+}
 
- .filter-container {
-   display: none;
- }
-
-
+.filter-container {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .movie-card {
-    padding: 5%;
-    margin: 1%;
-    flex-grow: 1;
-    flex-basis: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  
-  }
-
-  .movie-card .description {
-    height: 3vh;
-  }
+    /* For mobile phones: */
+    .movie-card {
+        padding: 5%;
+        margin: 1%;
+        flex-grow: 1;
+        flex-basis: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .movie-card .description {
+        height: 2.5vh;
+    }
+    .movie-card .title {
+        font-size: 0.8rem;
+    }
+    .movie-card:hover {
+        transition: transform .2s;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .pagination-container {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .pagination {
+        width: 35vh;
+        font-size: .7rem;
+    }
+    .pagination-btn {
+        width: 60px;
+    }
+    .pagination-btn:hover {
+        transform: translateY(-1.3px);
+    }
+    .movie-detail-container {
+        flex-direction: column;
+    }
+    .movie-detail-container img {
+        max-height: 35vh;
+        object-fit: scale-down;
+    }
+    .movie-detail-container .movie-details {
+        align-items: center;
+        justify-content: center;
+        margin-left: 1em;
+    }
 }

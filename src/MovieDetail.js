@@ -6,7 +6,8 @@ function MovieDetail() {
 
     const location = useLocation();
     const movie_id = location.pathname.split('/')[1];
-
+    const json = require('./other/logs.json');
+    
     useEffect(() => {
         fetchMovie();
         console.log(movie_id);
@@ -15,7 +16,7 @@ function MovieDetail() {
     const [movie, setMovie] = useState({});
     const fetchMovie = async() => {
         const data = await fetch (
-            `https://api.themoviedb.org/3/movie/${movie_id}?api_key=27a42a31404495c7097c57669d90dcce&language=en-US`
+            `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${json.api_key}&language=en-US`
         );
 
         const movieList = await data.json();
@@ -30,7 +31,7 @@ function MovieDetail() {
         <div className="movie-details">
             <h1 className="title">{movie.title}</h1>
             <p className="overview">{movie.overview}</p>
-            <p className="vote">{movie.vote_average}</p>
+            <p className="vote">{movie.vote_average}/10</p>
         </div>
         
     </div>
