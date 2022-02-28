@@ -1,6 +1,6 @@
 # Overview
 
-This is my first react project. I've learnt a lot of new things and had a lot of fun. If you want to check out the site: 	[title](https://movieapp.milank.xyz/)
+This is my first react project. I've learnt a lot of new things and had a lot of fun. If you want to check out the site: 	[movie-app](https://movieapp.milank.xyz/)
 
 # Getting Started with Create React App
 
